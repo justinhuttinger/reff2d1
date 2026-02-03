@@ -1,0 +1,13 @@
+{
+  "name": "wcs-referral-lookup",
+  "version": "1.0.0",
+  "description": "Search GHL contacts and pre-fill referral forms - multi-location",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
