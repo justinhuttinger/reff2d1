@@ -30,31 +30,64 @@ app.get('/', (req, res) => {
     <!DOCTYPE html>
     <html>
     <head>
-      <title>Member Referral Lookup</title>
+      <title>Member Referral Lookup - West Coast Strength</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
       <style>
         body {
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
           max-width: 600px;
-          margin: 50px auto;
-          padding: 20px;
+          margin: 0 auto;
+          padding: 40px 20px;
+          background: #ffffff;
+          color: #000000;
         }
-        h1 { color: #333; }
+        .logo {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        .logo img {
+          width: 150px;
+          height: auto;
+        }
+        h1 { 
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 36px;
+          color: #000000;
+          text-align: center;
+          margin-bottom: 10px;
+          letter-spacing: 2px;
+        }
+        p {
+          text-align: center;
+          color: #666;
+          margin-bottom: 30px;
+        }
         ul { list-style: none; padding: 0; }
-        li { margin: 10px 0; }
+        li { margin: 12px 0; }
         a {
           display: block;
-          padding: 15px 20px;
-          background: #007bff;
-          color: white;
+          padding: 16px 24px;
+          background: #000000;
+          color: #ffffff;
           text-decoration: none;
           border-radius: 8px;
           font-size: 18px;
+          font-weight: 600;
+          text-align: center;
+          transition: all 0.2s;
         }
-        a:hover { background: #0056b3; }
+        a:hover { 
+          background: #333333;
+        }
       </style>
     </head>
     <body>
-      <h1>Member Referral Lookup</h1>
+      <div class="logo">
+        <img src="/logo.png" alt="West Coast Strength">
+      </div>
+      <h1>MEMBER REFERRAL LOOKUP</h1>
       <p>Select your location:</p>
       <ul>${clubList}</ul>
     </body>
@@ -149,7 +182,10 @@ function getLocationPage(slug, clubName) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Member Referral Lookup - ${clubName}</title>
+  <title>Member Referral Lookup - ${clubName} | West Coast Strength</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -160,17 +196,33 @@ function getLocationPage(slug, clubName) {
       max-width: 600px;
       margin: 0 auto;
       padding: 40px 20px;
-      background: #f5f5f5;
+      background: #ffffff;
+      color: #000000;
+    }
+    
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .logo img {
+      width: 120px;
+      height: auto;
     }
     
     h1 {
-      color: #333;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      color: #000000;
       margin-bottom: 8px;
+      text-align: center;
+      letter-spacing: 2px;
     }
     
     .subtitle {
       color: #666;
       margin-bottom: 30px;
+      text-align: center;
     }
     
     .search-container {
@@ -181,14 +233,16 @@ function getLocationPage(slug, clubName) {
       width: 100%;
       padding: 16px 20px;
       font-size: 18px;
-      border: 2px solid #ddd;
+      border: 2px solid #000000;
       border-radius: 8px;
       outline: none;
       transition: border-color 0.2s;
+      background: #ffffff;
     }
     
     #searchInput:focus {
-      border-color: #007bff;
+      border-color: #333333;
+      box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
     }
     
     #results {
@@ -197,13 +251,13 @@ function getLocationPage(slug, clubName) {
       left: 0;
       right: 0;
       background: white;
-      border: 1px solid #ddd;
+      border: 2px solid #000000;
       border-top: none;
       border-radius: 0 0 8px 8px;
       max-height: 400px;
       overflow-y: auto;
       display: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       z-index: 100;
     }
     
@@ -219,7 +273,7 @@ function getLocationPage(slug, clubName) {
     }
     
     .result-item:hover {
-      background: #f0f7ff;
+      background: #f5f5f5;
     }
     
     .result-item:last-child {
@@ -228,7 +282,7 @@ function getLocationPage(slug, clubName) {
     
     .result-name {
       font-weight: 600;
-      color: #333;
+      color: #000000;
       margin-bottom: 4px;
     }
     
@@ -256,41 +310,48 @@ function getLocationPage(slug, clubName) {
     .instructions {
       margin-top: 30px;
       padding: 20px;
-      background: white;
+      background: #f8f8f8;
       border-radius: 8px;
       color: #666;
       font-size: 14px;
+      border: 1px solid #eee;
     }
     
     .instructions h3 {
-      color: #333;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      color: #000000;
       margin-top: 0;
+      letter-spacing: 1px;
     }
     
     .selected-member {
       margin-top: 30px;
       padding: 20px;
-      background: white;
+      background: #ffffff;
       border-radius: 8px;
-      border: 2px solid #007bff;
+      border: 2px solid #000000;
     }
     
     .selected-member h3 {
-      color: #333;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      color: #000000;
       margin-top: 0;
       margin-bottom: 15px;
+      letter-spacing: 1px;
     }
     
     .member-info {
       padding: 15px;
-      background: #f8f9fa;
+      background: #f8f8f8;
       border-radius: 6px;
       margin-bottom: 20px;
     }
     
     .member-info p {
       margin: 5px 0;
-      color: #333;
+      color: #000000;
     }
     
     .member-info .name {
@@ -315,32 +376,32 @@ function getLocationPage(slug, clubName) {
     }
     
     .btn-primary {
-      background: #007bff;
-      color: white;
+      background: #000000;
+      color: #ffffff;
     }
     
     .btn-primary:hover {
-      background: #0056b3;
+      background: #333333;
     }
     
     .btn-secondary {
-      background: #28a745;
-      color: white;
+      background: #000000;
+      color: #ffffff;
     }
     
     .btn-secondary:hover {
-      background: #1e7e34;
+      background: #333333;
     }
     
     .btn-outline {
-      background: white;
-      color: #666;
-      border: 2px solid #ddd;
+      background: #ffffff;
+      color: #000000;
+      border: 2px solid #000000;
     }
     
     .btn-outline:hover {
-      border-color: #007bff;
-      color: #007bff;
+      background: #000000;
+      color: #ffffff;
     }
     
     .manual-entry {
@@ -350,7 +411,10 @@ function getLocationPage(slug, clubName) {
   </style>
 </head>
 <body>
-  <h1>Member Referral Lookup</h1>
+  <div class="logo">
+    <img src="/logo.png" alt="West Coast Strength">
+  </div>
+  <h1>MEMBER REFERRAL LOOKUP</h1>
   <p class="subtitle">${clubName} Location</p>
   
   <div class="search-container">
@@ -364,7 +428,7 @@ function getLocationPage(slug, clubName) {
   </div>
 
   <div id="selectedMember" class="selected-member" style="display: none;">
-    <h3>Selected Member</h3>
+    <h3>SELECTED MEMBER</h3>
     <div id="memberInfo" class="member-info"></div>
     <div class="action-buttons">
       <button class="btn btn-primary" onclick="openReferralForm()">
@@ -383,7 +447,7 @@ function getLocationPage(slug, clubName) {
   </div>
 
   <div class="instructions">
-    <h3>How to use</h3>
+    <h3>HOW TO USE</h3>
     <p>1. Start typing a member's name, email, or phone number</p>
     <p>2. Click on the member from the results</p>
     <p>3. Choose to open the Referral Form or Book Day One</p>
