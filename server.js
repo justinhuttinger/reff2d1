@@ -43,14 +43,6 @@ app.get('/', (req, res) => {
           background: #ffffff;
           color: #000000;
         }
-        .logo {
-          text-align: center;
-          margin-bottom: 30px;
-        }
-        .logo img {
-          width: 150px;
-          height: auto;
-        }
         h1 { 
           font-family: 'Bebas Neue', sans-serif;
           font-size: 36px;
@@ -84,10 +76,7 @@ app.get('/', (req, res) => {
       </style>
     </head>
     <body>
-      <div class="logo">
-        <img src="/logo.png" alt="West Coast Strength">
-      </div>
-      <h1>MEMBER REFERRAL LOOKUP</h1>
+      <h1>DAY ONE / REFERRAL MEMBER LOOKUP</h1>
       <p>Select your location:</p>
       <ul>${clubList}</ul>
     </body>
@@ -198,16 +187,6 @@ function getLocationPage(slug, clubName) {
       padding: 40px 20px;
       background: #ffffff;
       color: #000000;
-    }
-    
-    .logo {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    
-    .logo img {
-      width: 120px;
-      height: auto;
     }
     
     h1 {
@@ -411,10 +390,7 @@ function getLocationPage(slug, clubName) {
   </style>
 </head>
 <body>
-  <div class="logo">
-    <img src="/logo.png" alt="West Coast Strength">
-  </div>
-  <h1>MEMBER REFERRAL LOOKUP</h1>
+  <h1>DAY ONE / REFERRAL MEMBER LOOKUP</h1>
   <p class="subtitle">${clubName} Location</p>
   
   <div class="search-container">
